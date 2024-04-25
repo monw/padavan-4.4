@@ -27,24 +27,27 @@
  leds {
         compatible = "gpio-leds";
 
-      status {
-			label = "status";
+      sys {
+			label = "power";
 			gpios = <&gpio0 15 GPIO_ACTIVE_LOW>;
 		};
 		
       wifi2g {
 			label = "wifi2g";
 			gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
+                        linux,default-trigger = "phy0radio";
 					};
 
 	   wifi5g {
 			label = "wifi5g";
 			gpios = <&gpio0 17 GPIO_ACTIVE_LOW>;
+                        linux,default-trigger = "phy1radio";
 				 	};
 		
 	   wwan0 {
 			label = "wwan0";
 			gpios = <&gpio0 14 GPIO_ACTIVE_LOW>;
+                        linux,default-trigger = "usbport";
 					};
   
 	};   
