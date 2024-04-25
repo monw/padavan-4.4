@@ -397,6 +397,12 @@ config RALINK_MT7612E
         default n
         select RTMP_PCI_SUPPORT
 
+#"MT7602E"
+config RALINK_MT7602E
+        bool
+        default n
+        select RTMP_PCI_SUPPORT
+
 #"MT7612U"
 config RALINK_MT7612U
         bool
